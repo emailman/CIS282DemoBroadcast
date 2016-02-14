@@ -10,8 +10,9 @@ public class BroadcastReceiveActivity extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         String actionName = intent.getAction();
         if (actionName != null &&
-                actionName.equals("edu.dtcc.emailman.demo.testingbroadcast"));
-        String msg = intent.getStringExtra("MyMessage");
-        Log.d(" Eric ", msg);
+                actionName.equals("edu.dtcc.emailman.testingbroadcast")) {
+            String msg = intent.getStringExtra("MyMessage");
+            Log.d("Eric", msg);
+        }
     }
 }
